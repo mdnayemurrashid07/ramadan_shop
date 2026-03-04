@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Ramadanshop</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/src/output.css">
 </head>
 <body class="bg-gray-100">
   <div class="bg-sky-100 text-black">
@@ -17,7 +18,7 @@
       </div>
       <div class="flex w-1/2">
         <input type="text" placeholder="Search for products"
-          class="w-full px-4 py-2 rounded-l-full text-black focus:outline-none">
+          class="w-full px-4 py-2 rounded-l-full text-black focus:outline-none bg-white">
         <button class="bg-white text-2xl px-6 rounded-r-full">
           🔍
         </button>
@@ -31,11 +32,11 @@
       </div>
     </div>
     <div class="flex justify-between items-center">
-      <div class="w-1/3 bg-sky-100 shadow-md p-6">
-        <h2 onclick="toggleCategory()" class="font-bold text-lg mb-4 cursor-pointer flex justify-between items-center">All Categories
+      <div class="w-1/4 bg-sky-100 p-6">
+        <h2 class="font-semibold text-lg text-gray-500 mb-4 cursor-pointer flex justify-center gap-20 items-center">All Categories
          <i class="fa-solid fa-angle-down"></i>
         </h2>
-        <!--<ul id="categoryList" class="space-y-3 text-gray-700 text-xl hidden transition-all duration-300">
+        <ul id="categoryList" class="space-y-3 text-gray-700 text-xl hidden transition-all duration-300">
            <li class="hover:text-red-700 cursor-pointer">Combo Pack Offer</li>
            <li class="hover:text-red-700 cursor-pointer">Shrimp, Hilsa & Shellfish</li>
            <li class="hover:text-red-700 cursor-pointer">Ready to Cook Local Fish</li>
@@ -45,7 +46,7 @@
            <li class="hover:text-red-700 cursor-pointer">Sea Fish</li>
            <li class="hover:text-red-700 cursor-pointer">Meat</li>
            <li class="hover:text-red-700 cursor-pointer">Dried Fish</li>
-        </ul>-->
+        </ul>
       </div>
     <ul class=" text-gray-500 flex justify-center items-center gap-20 px-10 py-3 font-semibold">
       <li class="cursor-pointer hover:underline hover:text-red-700">Home</li>
@@ -106,24 +107,5 @@
       </div>
     </div>
   </div>
-
-
-
-  <script>
-  function toggleCategory() {
-    const list = document.getElementById("categoryList");
-    const arrow = document.getElementById("arrow");
-
-    list.classList.toggle("hidden");
-
-    // Arrow rotate effect
-    if (list.classList.contains("hidden")) {
-      arrow.innerHTML = "▼";
-    } else {
-      arrow.innerHTML = "▲";
-    }
-  }
-</script>
-
 </body>
 </html>
