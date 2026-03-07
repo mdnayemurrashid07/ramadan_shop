@@ -31,23 +31,21 @@
         <span class="text-xl font-semibold text-gray-500">0.00$</span>
       </div>
     </div>
-    <div class="flex justify-between items-center">
-      <div class="w-1/4 bg-sky-100 p-6">
-        <h2 class="font-semibold text-lg text-gray-500 mb-4 cursor-pointer flex justify-center gap-20 items-center">All Categories
-         <i class="fa-solid fa-angle-down"></i>
-        </h2>
-        <ul id="categoryList" class="space-y-3 text-gray-700 text-xl hidden transition-all duration-300">
-           <li a="#" class="hover:text-red-700 cursor-pointer">Combo Pack Offer</li>
-           <li a="#" class="hover:text-red-700 cursor-pointer">Shrimp, Hilsa & Shellfish</li>
-           <li a="#" class="hover:text-red-700 cursor-pointer">Ready to Cook Local Fish</li>
-           <li a="#" class="hover:text-red-700 cursor-pointer">Shrimp - Freshwater Prawn, Tiger Prawn</li>
-           <li a="#" class="hover:text-red-700 cursor-pointer">Ready to Cook Chicken</li>
-           <li a="#" class="hover:text-red-700 cursor-pointer">Ready to Cook Meat</li>
-           <li a="#" class="hover:text-red-700 cursor-pointer">Sea Fish</li>
-           <li a="#" class="hover:text-red-700 cursor-pointer">Meat</li>
-           <li a="#" class="hover:text-red-700 cursor-pointer">Dried Fish</li>
-        </ul>
-      </div>
+  <div class="flex justify-between items-center">
+    <div class="w-1/4 bg-sky-100 p-6 relative">
+      <h2 id="toggleBtn" class="font-semibold text-lg text-gray-500 mb-4 cursor-pointer flex justify-between items-center">All Categories<i id="arrowIcon" class="fa-solid fa-angle-down transition-transform duration-300"></i></h2>
+  <ul id="categoryList"class="absolute w-full bg-sky-200 p-4 space-y-3 text-gray-700 text-lg hidden transition-all duration-300">
+    <li class="hover:text-red-700 cursor-pointer">Combo Pack Offer</li>
+    <li class="hover:text-red-700 cursor-pointer">Shrimp, Hilsa & Shellfish</li>
+    <li class="hover:text-red-700 cursor-pointer">Ready to Cook Local Fish</li>
+    <li class="hover:text-red-700 cursor-pointer">Shrimp - Freshwater Prawn, Tiger Prawn</li>
+    <li class="hover:text-red-700 cursor-pointer">Ready to Cook Chicken</li>
+    <li class="hover:text-red-700 cursor-pointer">Ready to Cook Meat</li>
+    <li class="hover:text-red-700 cursor-pointer">Sea Fish</li>
+    <li class="hover:text-red-700 cursor-pointer">Meat</li>
+    <li class="hover:text-red-700 cursor-pointer">Dried Fish</li>
+  </ul>
+</div>
     <ul class=" text-gray-500 flex justify-center items-center gap-20 px-10 py-3 font-semibold">
       <li a="#" class="cursor-pointer hover:underline hover:text-red-700">Home</li>
       <li a="#" class="cursor-pointer hover:underline hover:text-red-700">Products</li>
@@ -753,6 +751,19 @@
     </p>
   </div>
 </footer>
+
+<script>
+const toggleBtn = document.getElementById("toggleBtn");
+const categoryList = document.getElementById("categoryList");
+const arrowIcon = document.getElementById("arrowIcon");
+
+toggleBtn.addEventListener("click", () => {
+  categoryList.classList.toggle("hidden");
+  arrowIcon.classList.toggle("rotate-180");
+});
+</script>
+
+
 
 </body>
 </html>
